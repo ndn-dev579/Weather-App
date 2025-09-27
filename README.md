@@ -3,6 +3,11 @@
 
 A clean and simple web application that provides real-time weather information for any city. Built with plain HTML, CSS, and JavaScript, it fetches data from the OpenWeatherMap API to display the current temperature, humidity, wind speed, and weather conditions.
 
+![Weather App Screenshot](https://github.com/ndn-dev579/Weather-App/commit/35eac7f596618c570e0098c2cb8e2187cf7c7559)
+![Weather App Screenshot]()
+
+
+
 ---
 
 ## ✨ Key Features
