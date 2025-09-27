@@ -22,8 +22,8 @@
                 <button id="search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
             <div class="info">
-                <p id="cityName"></p>
-                <p id="temp"></p>
+                <h1 id="temp">22</h1>
+                <h2 id="city">city</h2>
 
                 <div class="details">
                     <div class="col">
@@ -46,6 +46,26 @@
 
         <script>
             const apikey = "5d5e96c68a6325abf4ae1e4f76c22092";
+            const apiurl="https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+            const searchBox=document.querySelector("#cityInput");
+            const searchBtn=document.querySelector("#search-btn");
+
+            async function checkWeather(city) {
+                const response=await fetch(apiurl+ city +`&appid=${apikey}`);
+                var data=await response.json();
+                console.log(data);
+
+                document.querySelector("#city").innerHTML=data.name;
+                document.querySelector("#temp").innerHTML=Math.round(data.main.temp)+"°C";
+                document.querySelector("#humidity").innerHTML=data.main.humidity+"%";
+                document.querySelector("#windspeed").innerHTML=data.wind.speed+" km/hr";
+ 
+            }
+            searchBtn.addEventListener("click",(e)=>{
+                e.preventDefault();
+                checkWeather(searchBox.value);
+            });
+            
 
         </script>
 
