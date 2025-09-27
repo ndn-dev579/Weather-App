@@ -8,6 +8,8 @@ background: linear-gradient(90deg, rgba(147, 213, 237, 1) 0%, rgba(157, 207, 195
     margin: auto;
     padding: 20px;
     border-radius: 10px;
+    text-align: center;
+
 
 
 }
@@ -18,9 +20,12 @@ background: linear-gradient(90deg, rgba(147, 213, 237, 1) 0%, rgba(157, 207, 195
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin: 20px;
+    margin: auto;
+    max-width: 400px;
+    text-align: center;
 
     width:25rem;
+    margin-bottom: 3rem;
 }
 
 #search-btn{
@@ -45,4 +50,11 @@ background: linear-gradient(90deg, rgba(147, 213, 237, 1) 0%, rgba(157, 207, 195
     align-items: center;
     justify-content: space-between;
     text-align: left;
+
+    background-color: azure;
+    padding: 0px 6px;
+    border-radius: 8px;
+    margin: 10px;
+    /* opacity: 0.8; */
 }
+
