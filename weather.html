@@ -22,6 +22,7 @@
                 <button id="search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
             <div class="info">
+                <img id="weatherIcon" src="assets/clear.png" alt="clear sky" width="100px">
                 <h1 id="temp">22°C</h1>
                 <h2 id="city">city</h2>
 
@@ -60,6 +61,22 @@
                 document.querySelector("#temp").innerHTML = Math.round(data.main.temp) + "°C";
                 document.querySelector("#humidity").innerHTML = data.main.humidity + "%";
                 document.querySelector("#windspeed").innerHTML = data.wind.speed + " km/hr";
+
+                if(data.weather[0].main == "Clouds"){
+                    document.querySelector("#weatherIcon").src = "assets/cloudy.png";
+                }
+                else if(data.weather[0].main == "Clear"){
+                    document.querySelector("#weatherIcon").src = "assets/sun.png";
+                }
+                else if(data.weather[0].main == "Rain"){
+                    document.querySelector("#weatherIcon").src = "assets/rainy.png";
+                }
+                else if(data.weather[0].main == "Drizzle"){
+                    document.querySelector("#weatherIcon").src = "assets/drizzle.png";
+                }
+                else if(data.weather[0].main == "Mist"){
+                    document.querySelector("#weatherIcon").src = "assets/haze.png";
+                }
 
             }
             searchBtn.addEventListener("click", (e) => {
