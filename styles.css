@@ -1,4 +1,48 @@
 .container{
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    /* background-color: #979ae8; */
+    background: #93d5ed;
+background: linear-gradient(90deg, rgba(147, 213, 237, 1) 0%, rgba(157, 207, 195, 1) 50%, rgba(136, 168, 242, 1) 100%);
+    width:40rem;
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+
+
+}
+
+.card{
+    /* background-color: #f8f8fb; */
+    
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+
+    width:25rem;
+}
+
+#search-btn{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+#cityInput{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+   
+    margin-bottom: 10px;
+}
+
+.col{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
 }
