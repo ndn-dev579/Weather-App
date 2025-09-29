@@ -61,9 +61,7 @@ body {
     margin: 10px;
 }
 
-/* -------------------
-   RESPONSIVENESS 
-------------------- */
+
 
 /* Tablets and smaller (≤ 768px) */
 @media (max-width: 768px) {
