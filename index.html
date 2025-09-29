@@ -15,8 +15,11 @@
 
 <body>
     <div class="container">
+        <video id="weatherVideo" autoplay muted loop playsinline></video>
+
         <h1>Weather App</h1>
-        <div class="card">
+        <!-- <div class="card"> -->
+
             <form id="weatherForm">
                 <input type="text" id="cityInput" placeholder="Enter city name" required>
                 <button id="search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -43,7 +46,9 @@
                 </div>
 
             </div>
-        </div>
+        
+    </div>
+
         <div id="weatherResult"></div>
 
         <script>
@@ -62,20 +67,31 @@
                 document.querySelector("#humidity").innerHTML = data.main.humidity + "%";
                 document.querySelector("#windspeed").innerHTML = data.wind.speed + " km/hr";
 
+
                 if(data.weather[0].main == "Clouds"){
                     document.querySelector("#weatherIcon").src = "assets/cloudy.png";
+                    weatherVideo.src = "videos/clouds.mp4";
+
                 }
                 else if(data.weather[0].main == "Clear"){
                     document.querySelector("#weatherIcon").src = "assets/sun.png";
+                    weatherVideo.src = "videos/clear.mp4";
+
                 }
                 else if(data.weather[0].main == "Rain"){
                     document.querySelector("#weatherIcon").src = "assets/rainy.png";
+                    weatherVideo.src = "videos/rain.mp4";
+
                 }
                 else if(data.weather[0].main == "Drizzle"){
                     document.querySelector("#weatherIcon").src = "assets/drizzle.png";
+                    weatherVideo.src = "videos/drizzle.mp4";
+
                 }
                 else if(data.weather[0].main == "Mist"){
                     document.querySelector("#weatherIcon").src = "assets/haze.png";
+                    weatherVideo.src = "videos/mist.mp4";
+
                 }
 
             }
